@@ -2,11 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "type": "module",
-  "engines": {
-    "node": "16.x"
-  },
+  "main": "index.js",
   "dependencies": {
     "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
