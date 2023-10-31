@@ -3,16 +3,17 @@ const csv = require('csv-parser')
 const fs = require('fs')
 const cors = require('cors')
 const app = express()
+const path = require('path');
 const port = process.env.PORT || 4000
 
 app.use(cors())
-
+console.log(path.join(__dirname, 'public/data.csv'))
 app.get('/', (req, res,next) => {
     const results = [];
     // var thenum = thestring.replace(/^\D+/g, '');
     const unrefinedData = []
 
-    fs.createReadStream('./public/data.csv')
+    fs.createReadStream(path.join(__dirname, 'public/data.csv'))
       .pipe(csv())
       .on('data', (data) => {
        unrefinedData.push(data)
