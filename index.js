@@ -7,7 +7,6 @@ const path = require('path');
 const port = process.env.PORT || 4000
 
 app.use(cors())
-console.log(path.join(__dirname, 'public/data.csv'))
 app.get('/', (req, res,next) => {
     const results = [];
     // var thenum = thestring.replace(/^\D+/g, '');
