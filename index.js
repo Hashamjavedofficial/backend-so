@@ -12,7 +12,7 @@ app.get('/', (req, res,next) => {
     // var thenum = thestring.replace(/^\D+/g, '');
     const unrefinedData = []
 
-    fs.createReadStream('data.csv')
+    fs.createReadStream('./public/data.csv')
       .pipe(csv())
       .on('data', (data) => {
        unrefinedData.push(data)
