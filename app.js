@@ -7,7 +7,7 @@ const port = 4000
 
 app.use(cors())
 
-app.get('/', (req, res,next) => {
+app.get('/data', (req, res,next) => {
     const results = [];
     // var thenum = thestring.replace(/^\D+/g, '');
     const unrefinedData = []
